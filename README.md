@@ -63,7 +63,7 @@ npm update
 * Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
 
 ```bash
-git clone https://github.com/Nurutomo/wabot-aq
+git clone https://github.com/Klebitz12890/wabot-aq-1
 cd wabot-aq
 npm install
 npm update
