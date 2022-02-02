@@ -1,5 +1,4 @@
-pkg install nodejs -y
-pkg install ffmpeg -y
-pkg install imagemagick -y
+git clone https://github.com/Klebitz12890/wabot-aq-1
+cd wabot-aq-1
 npm install
-npm update
+npm start
