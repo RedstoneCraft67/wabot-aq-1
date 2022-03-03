@@ -1,25 +1,34 @@
 let fs = require('fs')
 let chalk = require('chalk')
 
-global.owner = ['6282260691984', '6281211006838', '6282124128334', '6288809160360'] // Put your number here
+global.owner = ['6282260691984', '6281211006838', '6282124128334', '6282117239529'] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com',
+  bg: 'http://bochil.ddns.net',
+  kotz: 'https://api.justkotz.tech',
+  caliph: 'https://caliphapi.com',
   xteam: 'https://api.xteam.xyz',
+  amel: 'https://melcanz.com',
+  lol: 'https://api.lolhuman.xyz',
   zahir: 'https://zahirr-web.herokuapp.com',
-  zeks: 'https://api.zeks.me',
+  zeks: 'https://zeks.me',
   pencarikode: 'https://pencarikode.xyz',
   LeysCoder: 'https://leyscoders-api.herokuapp.com'
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
-  'https://api.xteam.xyz': 'd90a9e986e18778b',
-  'https://zahirr-web.herokuapp.com': 'zahirgans',
-  'https://api.zeks.me': 'apivinz',
-  'https://pencarikode.xyz': 'pais',
-  'https://leyscoders-api.herokuapp.com': 'dappakntlll'
+  'https://api.justkotz.tech': 'apikeylu',
+  'https://caliphapi.com': 'apikeylu',
+  'https://api.xteam.xyz': 'apikeylu',
+  'https://melcanz.com': 'apikeylu',
+  'https://api.lolhuman.xyz': 'apikeylu',
+  'https://zahirr-web.herokuapp.com': 'apikeylu',
+  'https://zeks.me': 'apikeylu',
+  'https://pencarikode.xyz': 'apikeylu',
+  'https://leyscoders-api.herokuapp.com': 'apikeylu'
 }
 
 // Sticker WM
