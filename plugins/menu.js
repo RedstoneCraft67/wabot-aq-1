@@ -141,15 +141,57 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.reply(m.chat, text.trim(), m)
+     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+     templateMessage: {
+         hydratedTemplate: {
+           hydratedContentText: text.trim(),
+           locationMessage: { 
+           jpegThumbnail: fs.readFileSync('./media/menu.jpg') },
+           hydratedFooterText: wm,
+           hydratedButtons: [{
+             urlButton: {
+               displayText: 'Instagram',
+               url: instagram
+             }
+
+           },
+           {
+             quickReplyButton: {
+               displayText: 'Donasi',
+               id: '.donasi',
+             }
+
+           },
+           {
+             quickReplyButton: {
+               displayText: 'Sewa',
+               id: '.sewa',
+             }
+
+           },
+           {
+             quickReplyButton: {
+               displayText: 'My',
+               id: '.my',
+             }
+           }]
+         }
+       }
+     }), { userJid: m.sender, quoted: m });
+    //conn.reply(m.chat, text.trim(), m)
+    return await conn.relayMessage(
+         m.chat,
+         template.message,
+         { messageId: template.key.id }
+     )
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+   // conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
   }
 }
-handler.help = ['menu', 'help', '?']
+handler.help = ['menu']
 handler.tags = ['main']
-handler.command = /^(menu|help|\?)$/i
+handler.command = /^(menu|help)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
