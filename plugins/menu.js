@@ -147,7 +147,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     throw e
     jpegThumbnail: fs.readFileSync('./media/menu.jpg') }
   }
-}
 handler.help = ['menu', 'help', '?']
 handler.tags = ['main']
 handler.command = /^(menu|help|\?)$/i
