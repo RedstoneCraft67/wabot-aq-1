@@ -1,7 +1,7 @@
 let fs = require('fs')
 let chalk = require('chalk')
 
-global.owner = ['6282260691984', '6281211006838', '6282124128334', '6282117239529'] // Put your number here
+global.owner = ['6287876954064', '6281211006838', '6282124128334', '6281212080578'] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
@@ -22,7 +22,7 @@ global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
   'https://api.justkotz.tech': 'apikeylu',
   'https://caliphapi.com': 'apikeylu',
-  'https://api.xteam.xyz': 'apikeylu',
+  'https://api.xteam.xyz': 'd90a9e986e18778b',
   'https://melcanz.com': 'apikeylu',
   'https://api.lolhuman.xyz': 'apikeylu',
   'https://zahirr-web.herokuapp.com': 'apikeylu',
@@ -36,8 +36,8 @@ global.APIKeys = { // APIKey Here
 const spack = fs.readFileSync("lib/exif.json")
 const stickerpack = JSON.parse(spack)
 if (stickerpack.spackname == '') {
-  var sticker_name = 'BOTWA'
-  var sticker_author = 'Klebitz'
+  var sticker_name = 'Never gonna give you up'
+  var sticker_author = 'RGBotz'
 } else {
   var sticker_name = stickerpack.spackname
   var sticker_author = stickerpack.sauthor
